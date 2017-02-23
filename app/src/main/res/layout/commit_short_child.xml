@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/commit_short_circleView"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/commit_short_username"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"
+        android:gravity="center_vertical"
+        android:layout_toRightOf="@id/commit_short_circleView"/>
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:id="@+id/popularity_short"
+        android:background="@drawable/fabulous_grey"
+        android:layout_marginLeft="320dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/int_popularity_short"
+        android:layout_marginTop="9dp"
+        android:layout_marginLeft="337dp"/>
+    <TextView
+        android:id="@+id/commit_short"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="13dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="2dp"
+        android:paddingBottom="10dp"
+        android:textSize="16dp"
+        android:textColor="@color/blackGrey"
+        android:layout_marginTop="50dp" />
+</RelativeLayout>

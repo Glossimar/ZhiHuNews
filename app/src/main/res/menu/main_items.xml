@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/backup"
+        android:title="夜间模式"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/up"
+        android:title="设置选项"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/ackup"
+        android:icon="@drawable/bail"
+        android:title="消息"
+        app:showAsAction="always"/>
+</menu>

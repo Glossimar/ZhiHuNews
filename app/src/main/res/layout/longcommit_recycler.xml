@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/commit_circleView"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/commit_username"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"
+        android:layout_toRightOf="@id/commit_circleView"/>
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:id="@+id/popularity"
+        android:layout_marginLeft="320dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/int_popularity"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="340dp"/>
+    <TextView
+        android:id="@+id/commit_long"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="10dp"
+        android:textSize="16dp"
+        android:textColor="@color/blackGrey"
+       android:layout_marginTop="50dp" />
+</RelativeLayout>

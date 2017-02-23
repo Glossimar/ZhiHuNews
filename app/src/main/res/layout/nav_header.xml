@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="155dp"
+    android:background="@color/colorPrimary"
+    >
+
+    <LinearLayout
+        android:id="@+id/sign_in"
+                android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/colorPrimary">
+
+        <com.example.picture.CirclelmageViewW
+            android:id="@+id/icon_img"
+            android:layout_width="39dp"
+            android:layout_height="39dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+             />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18sp"
+            android:layout_marginTop="20dp"
+            android:text="请登录"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/operat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/sign_in"
+        android:background="@color/colorPrimary">
+        <ImageView
+            android:id="@+id/star_imageView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/star" />
+        <Button
+            android:id="@+id/button"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="0dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:text="我的收藏"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/load_imageView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/load" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:gravity="left|center_vertical"
+            android:text="离线下载"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/operat"
+        android:id="@+id/aaaaa"
+        android:background="@color/white">
+        <ImageButton
+            android:id="@+id/HomeButtn"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="50dp"
+            android:layout_below="@id/operat"
+            android:scaleType="centerCrop"
+            android:src="@drawable/home"
+            android:background="@color/white" />
+
+        <Button
+            android:id="@+id/HomeText"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@id/operat"
+            android:layout_toLeftOf="@id/HomeButtn"
+            android:text="首页"
+            android:textSize="16dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:background="@color/white"
+            android:textColor="@color/colorPrimary"
+            />
+    </LinearLayout>
+</LinearLayout>
+
+

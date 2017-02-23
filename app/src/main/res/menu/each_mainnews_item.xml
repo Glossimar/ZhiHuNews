@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:title="收藏"
+        android:id="@+id/like"
+        app:showAsAction="always"
+        android:icon="@drawable/star"/>
+    <item
+        android:title="评论"
+        android:id="@+id/commit"
+        app:showAsAction="always"
+        android:icon="@drawable/commit" />
+    <item
+        android:id="@+id/fabulous"
+        android:title="赞"
+        app:showAsAction="always"
+        android:icon="@drawable/fabulous"/>
+</menu>
