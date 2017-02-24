@@ -21,7 +21,7 @@
   * 用了DrawerLayout实现了侧滑菜单；
   * 用了Bitmap、Convas、Paint、ColorFliter以及关联画笔的BitmapShader写了无法设置头像边界的圆形头像（我一直不是很懂他的平移。。。）；<br>
   * ExpandableListView实现了短评折叠；<br>
-  * 在主界面的具体新闻中用了可折叠式标题栏CollaspingToolbarLayout将新闻对应的图片以及标题栏一起折叠；<br>
+  * 在主界面的具体新闻中用了可折叠式标题栏CollaspingToolbarLayout将新闻对应的图片以及标题栏一起折叠；<br>
   * 利用File、FileOutputStream、ObjectOutputStream、FileInputStream、ObjectInputStream写了离线缓存的以及读取缓存的方法：主要为ObjectOutputStreamy的构造方法、该类中的方法writeObject()实现了序列化以及保存对象到文件，然后用ObjectInputStream的构造方法、
   该类中的方法readObject()为实现了反序列化以及读取对象
 <br>
