@@ -43,6 +43,6 @@ compile 'com.google.code.gson:gson:2.7'
   * 在虚拟机上调试时出现的“今日热闻”里面的新闻会比真机调试时的要少很多；<br>
   
    **虚拟机调试：**<br>
-![](https://github.com/SunWanQi/ZhiHuNews/blob/master/app/src/main/res/drawable/jvm.png)<br>
+![](https://github.com/SunWanQi/ZhiHuNews/blob/master/app/src/main/res/drawable/jvm.png)<br><br><br>
    **真机调试：**<br>
 ![](https://github.com/SunWanQi/ZhiHuNews/blob/master/app/src/main/res/drawable/true.png)
