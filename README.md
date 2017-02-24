@@ -10,6 +10,7 @@
   * 点击标题栏的点赞图标，可（假）以（装）点（赞）赞（了），并显示当前赞的数量，点赞以后图标会变成红色；<br>
   * 在查看具体新闻时可以用回顶部按钮方便回到顶部<br>
 <br>
+==========
 ##用到的类以及类的方法
 
   * 用了HttpURLConnection发送了网络请求，并用Gson解析了json数据；<br>
@@ -21,14 +22,15 @@
   * 用了Bitmap、Convas、Paint、ColorFliter以及关联画笔的BitmapShader写了无法设置头像边界的圆形头像（我一直不是很懂他的平移。。。）；
   * ExpandableListView实现了短评折叠；
   * 在主界面的具体新闻中用了可折叠式标题栏CollaspingToolbarLayout将新闻对应的图片以及标题栏一起折叠
-##使用的开源库
-  * Glide图片加载：<br>
-    ```java
-    compile 'com.github.bumptech.glide:glide:3.7.0'
-    ```
-   * Gson解析json数据：<br>
-   ```java
-   compile 'com.google.code.gson:gson:2.7'
-   ```
+##使用的开源库:
+#####Glide图片加载：<br>
+```java
+compile 'com.github.bumptech.glide:glide:3.7.0'
+```
+#####Gson解析json数据：<br>
+```java
+compile 'com.google.code.gson:gson:2.7'
+```
+   -------------
 ##P.S.
-   * 真机调试时会出现点击延迟
+  真机调试时会出现点击延迟
