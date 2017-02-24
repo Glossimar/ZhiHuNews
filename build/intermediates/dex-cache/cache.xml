@@ -151,7 +151,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="7afc1bf0ff390c026a596106879d3e509ebe234d">
+        sha1="5cadc76b134af5ce0464a48cdc20ee8b5d9b5d56">
         <dex dex="C:\Users\LENOVO\ZhiHuNews\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_64c2a3fde6be7da9922ccb87c957e1f98594115b\classes.dex" />
     </item>
     <item
@@ -160,7 +160,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="da3d8225911d3234f5181501f54cdea6458a2c18">
+        sha1="2e2670b32fa13674a134a13b1e718e244ad9565c">
         <dex dex="C:\Users\LENOVO\ZhiHuNews\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_5ad43a5ef861b32fcb4a78fce340356f696f088c\classes.dex" />
     </item>
     <item
