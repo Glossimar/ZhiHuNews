@@ -20,25 +20,20 @@ public class ViewPagerNew extends ViewPager {
 
     public ViewPagerNew(Context context) {
         super(context);
-        Log.d(TAG, "ViewPagerNew: aaaaaaaaaaaaaaaaaaaaaaaab");
         init();
     }
 
     public ViewPagerNew(Context context, AttributeSet attrs) {
         super(context, attrs);
-        Log.d(TAG, "ViewPagerNew: aaaaaaaaaaaaaaaaaaaaaaaaaaaaW");
         init();
     }
     private void init(){
 //        myHandler=new MyHandler(this,layout(););
         currentPosition=1;
-//        setCurrentItem(currentPosition,false);
-//        MainActivity.tttt.setText("aaaaaaaaaaaaaa");
     }
 
     public void showNextView(){
         setCurrentItem(currentPosition+1,true);
-        Log.d(TAG, "showNextView: aaaaaaaaaaaaaaaaaaaaaa");
     }
 
     public long getInterval() {
