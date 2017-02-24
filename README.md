@@ -21,9 +21,12 @@
   * 用了DrawerLayout实现了侧滑菜单；
   * 用了Bitmap、Convas、Paint、ColorFliter以及关联画笔的BitmapShader写了无法设置头像边界的圆形头像（我一直不是很懂他的平移。。。）；<br>
   * ExpandableListView实现了短评折叠；<br>
-  * 在主界面的具体新闻中用了可折叠式标题栏CollaspingToolbarLayout将新闻对应的图片以及标题栏一起折叠<br>
-##使用的开源库:
-#####Glide图片加载：<br>
+  * 在主界面的具体新闻中用了可折叠式标题栏CollaspingToolbarLayout将新闻对应的图片以及标题栏一起折叠
+  <br>
+##使用的开源库：
+<br>
+#####Glide加载图片：
+<br>
 ```java
 compile 'com.github.bumptech.glide:glide:3.7.0'
 ```
