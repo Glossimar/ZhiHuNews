@@ -45,4 +45,4 @@ compile 'com.google.code.gson:gson:2.7'
     虚拟机调试：
 ![](https://github.com/SunWanQi/ZhiHuNews/blob/master/app/src/main/res/drawable/jvm.png)
     真机调试：
-![](https://github.com/SunWanQi/ZhiHuNews/blob/master/app/src/main/res/drawable/ture.png)
+![](https://github.com/SunWanQi/ZhiHuNews/blob/master/app/src/main/res/drawable/true.png)
