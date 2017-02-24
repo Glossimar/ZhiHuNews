@@ -13,7 +13,7 @@
   * 有wifi的时候会进行开启界面和主界面的自动缓存，当网络未连接时会读取之前的缓存信息；<br>
 
 ##用到的类以及类的方法：
-  * 用了HttpURLConnection发送了网络请求，并用Gson解析了json数据；<br>
+  * 用了HttpURLConnection发送了网络请求，并用Gson解析了json数据；<br>
   * Glide加载图片<br>
   * 继承了handle、ViewPager、PagerAdapter写了ViewPager无限轮播图:<br>
     主要用了viewPager的setCurrentItem()、handle继承后覆写的方法handleMessage()（虽然继承了<br>ViewPager.OnPageChangeListener然而。。。监听依然没加上。。。QWQ）<br>
