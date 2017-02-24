@@ -28,6 +28,7 @@ import java.net.URL;
  */
 
 public class HttpResquest extends AppCompatActivity {
+
     public static void http(final String address,final HttpCalBackListener listener ){
         new Thread(new Runnable() {
             @Override
@@ -65,10 +66,10 @@ public class HttpResquest extends AppCompatActivity {
         }).start();
     }
 
-    public static boolean saveObject(Serializable ser,String name){
+    public static boolean saveObject(Serializable ser,String fileName){
         FileOutputStream fos=null;
         ObjectOutputStream oos=null;
-        File f=new File(name);
+        File f=new File(fileName);
 //        +File.separator+"test.txt"
         try{
             fos=new FileOutputStream(f);
@@ -91,10 +92,10 @@ public class HttpResquest extends AppCompatActivity {
         }
     }
 
-    public static Serializable readObject(String sm){
+    public static Serializable readObject(String fileName){
         FileInputStream fis=null;
         ObjectInputStream ois=null;
-        File f=new File(sm);
+        File f=new File(fileName);
 //        +File.separator+"test.txt"
         try {
             fis=new FileInputStream(f);

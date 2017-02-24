@@ -29,7 +29,7 @@ import com.bignerdranch.android.zhihunews.Functions.HttpCalBackListener;
 import com.bignerdranch.android.zhihunews.Functions.HttpResquest;
 //import com.bignerdranch.android.zhihunews.Functions.TopcLinAdapter;
 import com.bignerdranch.android.zhihunews.Adapter.MainNewsAdapter;
-import com.bignerdranch.android.zhihunews.Adapter.RollViewAdapter;
+//import com.bignerdranch.android.zhihunews.Adapter.RollViewAdapter;
 import com.bignerdranch.android.zhihunews.Adapter.ThemeMenuAdapter;
 //import com.bignerdranch.android.zhihunews.Functions.TopicLinAdapterter;
 import com.bignerdranch.android.zhihunews.Functions.LoadPic;
@@ -40,7 +40,7 @@ import com.bignerdranch.android.zhihunews.JSONData.TopicLin;
 import com.bignerdranch.android.zhihunews.R;
 import com.example.picture.CirclelmageViewW;
 import com.google.gson.Gson;
-import com.jude.rollviewpager.RollPagerView;
+//import com.jude.rollviewpager.RollPagerView;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -83,17 +83,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        viewPager=(ViewPagerNew)findViewById(R.id.rollViewPager);
-        layout=(LinearLayout)findViewById(R.id.dot);
-        tttt=(TextView)findViewById(R.id.ddddd);
+        viewPager = (ViewPagerNew) findViewById(R.id.rollViewPager);
+        layout = (LinearLayout) findViewById(R.id.dot);
+        tttt = (TextView) findViewById(R.id.ddddd);
 
 
-
-        intentTheme=new Intent();
+        intentTheme = new Intent();
         mainDateText = (TextView) findViewById(R.id.main_date_text);
         mTextViewPager = (TextView) findViewById(R.id.text_viewPager);
-        recyclerViewMenu=(RecyclerView)findViewById(R.id.RecyclerView_Menu);
-        circleDrawer=(CirclelmageViewW)findViewById(R.id.icon_img);
+        recyclerViewMenu = (RecyclerView) findViewById(R.id.RecyclerView_Menu);
+        circleDrawer = (CirclelmageViewW) findViewById(R.id.icon_img);
         imageButton = (ImageView) findViewById(R.id.imageButton);
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         recyclerView = (RecyclerView) findViewById(R.id.main_recycler);
@@ -101,8 +100,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         imageButton2 = (ImageButton) findViewById(R.id.HomeButtn);
         button = (Button) findViewById(R.id.HomeText);
 
-        File file=Environment.getExternalStorageDirectory();
-        name=file.toString()+File.separator+"test.txt";
+        File file = Environment.getExternalStorageDirectory();
+        name = file.toString() + File.separator + "test.txt";
 
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.ToolBar);
@@ -115,13 +114,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         drawerLayout.setDrawerListener(toggle);
         toggle.syncState();
 
-        LoadPic.loadImg(this,"http://pic1.zhimg.com/da8e974dc_m.jpg",circleDrawer);
+        LoadPic.loadImg(this, "http://pic1.zhimg.com/da8e974dc_m.jpg", circleDrawer);
         naviView.setCheckedItem(R.id.button);
         naviView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
 
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {
-                Toast.makeText(MainActivity.this, "aaaaa", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "aaaaa", Toast.LENGTH_LONG).show();
                 return true;
             }
         });
@@ -138,43 +137,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 e.printStackTrace();
             }
         });
-//
-//        if (HttpResquest.isNetworkConnected(this)) {
-//            if (HttpResquest.isWifiConnected(this)) {
-//                HttpResquest.http("http://news-at.zhihu.com/api/4/news/latest", new HttpCalBackListener() {
-//                    @Override
-//                    public void onFnish(String responce) {
-//
-//                        Log.d(TAG, "onFnish: 。。。。。。。。"+name+".........");
-//                        HttpResquest.saveObject(responce,name);
-//                        if (HttpResquest.readObject(name)!=null) {
-//                            JSONDATA_SER = (String) HttpResquest.readObject(name);
-//                            Log.d(TAG, "onFnish: JSONDATA_SRE不是空的缓存已经成功" + JSONDATA_SER);
-//                            paresJsonMain(JSONDATA_SER);
-//                            Log.d(TAG, "onFnish: ddddddddddddddddddddddddddddddddddddddddddddddddd");
-//                        }else{
-//                            Toast.makeText(MainActivity.this, "ERROR", Toast.LENGTH_SHORT).show();
-//                        }
-//                    }
-//
-//                    @Override
-//                    public void onError(Exception e) {
-//                        Log.d(TAG, "onError: eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee");
-//                        e.printStackTrace();
-//                    }
-//                });
-//            }
-//        } else if (HttpResquest.isMoblileNetworkConnected(this)||!HttpResquest.isNetworkConnected(this)) {
-//
-//            if (JSONDATA_SER != null) {
-//                Log.d(TAG, "onCreate: ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss");
-//                JSONDATA_SER = (String) HttpResquest.readObject(name);
-//                paresJsonMain(JSONDATA_SER);
-//            } else {
-//                Log.d(TAG, "onCreate: JSONDATA_SRE是空的。。。缓存未成功");
+
+        if (HttpResquest.isNetworkConnected(this)) {
+            Log.d(TAG, "onCreate: w网络已连接");
                 HttpResquest.http("http://news-at.zhihu.com/api/4/news/latest", new HttpCalBackListener() {
                     @Override
                     public void onFnish(String responce) {
+
+                        Log.d(TAG, "onFnish: 。。。。。。。。" + name + ".........");
+                        if (HttpResquest.isWifiConnected(MainActivity.this)) {
+                            HttpResquest.saveObject(responce, name);
+
+                            JSONDATA_SER = (String) HttpResquest.readObject(name);
+                            Log.d(TAG, "onFnish: JSONDATA_SRE不是空的缓存已经成功" + JSONDATA_SER);
+                        }
                         paresJsonMain(responce);
                     }
 
@@ -183,8 +159,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         e.printStackTrace();
                     }
                 });
-
+        } else {
+            Log.d(TAG, "onCreate: 读取缓存");
+            JSONDATA_SER = (String) HttpResquest.readObject(name);
+            if (JSONDATA_SER!=null) {
+                paresJsonMain(JSONDATA_SER);
+                Toast.makeText(this, "网络好像有问题。。。QAQ\n。。。就只能先看看以前的内容了。。。\n心痛到无法呼吸"
+                        , Toast.LENGTH_LONG).show();
+            }else
+            Toast.makeText(this, "网络好像有问题。。。QAQ\n。。。而且连本地缓存也没有。。。\n心痛到无法呼吸"
+                    , Toast.LENGTH_LONG).show();
         }
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
