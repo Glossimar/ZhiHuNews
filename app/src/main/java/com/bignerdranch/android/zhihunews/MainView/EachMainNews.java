@@ -18,6 +18,7 @@ import android.webkit.WebView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bignerdranch.android.zhihunews.ExtraView.Commits;
 import com.bignerdranch.android.zhihunews.Functions.HttpCalBackListener;
@@ -43,13 +44,9 @@ public class EachMainNews extends AppCompatActivity {
     private WebView webView;
     private WebSettings ws;
     private TextView textYiyle;
-    private String JSON_NEXT_1;
-    private String JSON_NEXT_2;
-    private String JSON_NEXT_3;
-    private String JSON_NEXT_4;
-    private String JSON_NEXT_5;
     private ImageView imageView;
     private MainNewsData mainNewsData;
+    private ExtraData extraData;
     private CollapsingToolbarLayout collapsingToolbarLayout;
 
     @Override
@@ -91,6 +88,18 @@ public class EachMainNews extends AppCompatActivity {
 
             }
         });
+
+        HttpResquest.http("http://news-at.zhihu.com/api/" + mainNewsId + "/story-extra/9017209", new HttpCalBackListener() {
+            @Override
+            public void onFnish(String responce) {
+                pareJsonExtra(responce);
+            }
+
+            @Override
+            public void onError(Exception e) {
+
+            }
+        });
     }
     public void pareJsonMainNews(String jsonData){
         Gson gson=new Gson();
@@ -113,6 +122,12 @@ public class EachMainNews extends AppCompatActivity {
         });
     }
 
+    public void pareJsonExtra(String  jsonData){
+        Gson gson=new Gson();
+        extraData=gson.fromJson(jsonData,ExtraData.class);
+
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.each_mainnews_item,menu);
@@ -126,8 +141,10 @@ public class EachMainNews extends AppCompatActivity {
                 if (item.getIcon().getConstantState().equals(getResources()
                         .getDrawable(R.drawable.fabulous).getConstantState())){
                     item.setIcon(R.drawable.fabulous_red);
+                    Toast.makeText(this, "这是第"+(extraData.getPopularity()+1)+"个赞啦", Toast.LENGTH_LONG).show();
                 }else {
                     item.setIcon(R.drawable.fabulous);
+                    Toast.makeText(this, "...QAQ...\n少了一个赞\n只有"+extraData.getPopularity()+"个赞了", Toast.LENGTH_LONG).show();
                 }
                 break;
             case R.id.commit:

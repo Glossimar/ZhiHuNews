@@ -3,12 +3,21 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\LENOVO\ZhiHuNews\app\build\intermediates\exploded-aar\com.jude\rollviewpager\1.4.6\jars\classes.jar"
+        jar="C:\Users\LENOVO\ZhiHuNews\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\25.0.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="5369e56159e8bd94b665f90390f262d26a57e73a">
-        <dex dex="C:\Users\LENOVO\ZhiHuNews\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.jude-rollviewpager-1.4.6_42e0feaac9b35aaa2ede4b90237bbda05b3dca3e\classes.dex" />
+        sha1="1108575c7dc7b7f5b378b3290ac90de81a9b8830">
+        <dex dex="C:\Users\LENOVO\ZhiHuNews\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-cardview-v7-25.0.1_32cefb7aa4b5c3d00514825824048811e72b946e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\LENOVO\ZhiHuNews\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="bc7e99e8d0fc279a05aa91378530f467ad62d443">
+        <dex dex="C:\Users\LENOVO\ZhiHuNews\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-25.0.1_9ec2dafd855bd03731131972841bd16c77061892\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -27,6 +36,33 @@
         revision="25.0.0"
         sha1="26c6eef571592c91f29e56fda0bac73321de0c92">
         <dex dex="C:\Users\LENOVO\ZhiHuNews\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-25.0.1_9d8e66bb8503e84725ff005dae3bef3db1386a3b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\LENOVO\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.0.1\support-annotations-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a09194311f8f89c3e6db09d79f50897a889d615e">
+        <dex dex="C:\Users\LENOVO\ZhiHuNews\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.0.1_1ca06fe1a728178591676be712a6e420c9bc3715\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\LENOVO\ZhiHuNews\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\LENOVO\ZhiHuNews\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-25.0.1_7d789abe88f1b1407ddfe0b2337df58e275454b6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\LENOVO\ZhiHuNews\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a2303e6c291daed5cb597ffe2f522c925dd425ab">
+        <dex dex="C:\Users\LENOVO\ZhiHuNews\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_64c2a3fde6be7da9922ccb87c957e1f98594115b\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -57,110 +93,11 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\LENOVO\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.7\751f548c85fa49f330cecbb1875893f971b33c4e\gson-2.7.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
-        <dex dex="C:\Users\LENOVO\ZhiHuNews\app\build\intermediates\transforms\dex\debug\folders\1000\10\gson-2.7_e52c9c76e4f03520fc6f341f4ceabd6737e2aefd\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\LENOVO\ZhiHuNews\app\build\intermediates\exploded-aar\com.android.support\transition\25.0.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="c1b6ab157e8e12cb08b9ee82bb5e3c5d22632eb3">
-        <dex dex="C:\Users\LENOVO\ZhiHuNews\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-transition-25.0.1_f6ecd696d544764dbc3bf027f67a7201b60b46fe\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\LENOVO\ZhiHuNews\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.0.1\jars\libs\internal_impl-25.0.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="c0bd6ffb002a85b5e7cad29f8558d1cc59539679">
-        <dex dex="C:\Users\LENOVO\ZhiHuNews\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.1_57e553359a27d63e44a78994079aa236ffed6c0f\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\LENOVO\ZhiHuNews\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.1\jars\libs\internal_impl-25.0.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="f83b00041ecfba705603fec40363416c7de69719">
-        <dex dex="C:\Users\LENOVO\ZhiHuNews\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.1_21743203f698db85fe7483e109c0d61a31dd27b7\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\LENOVO\ZhiHuNews\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.0.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="297d4bcf6ed4e747a1bf7d0d094a2d911a8d3a8e">
-        <dex dex="C:\Users\LENOVO\ZhiHuNews\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-25.0.1_ef52d878937e235fa2de141d15f568fcda66e59c\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\LENOVO\ZhiHuNews\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="6a1479afe9f1b3645e1cd9a87318976893472818">
-        <dex dex="C:\Users\LENOVO\ZhiHuNews\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-25.0.1_5539e32e020fb5b3e8ede7e44d5ce1bf8d13f029\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\LENOVO\ZhiHuNews\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\25.0.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="1108575c7dc7b7f5b378b3290ac90de81a9b8830">
-        <dex dex="C:\Users\LENOVO\ZhiHuNews\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-cardview-v7-25.0.1_32cefb7aa4b5c3d00514825824048811e72b946e\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\LENOVO\ZhiHuNews\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="bc7e99e8d0fc279a05aa91378530f467ad62d443">
-        <dex dex="C:\Users\LENOVO\ZhiHuNews\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-25.0.1_9ec2dafd855bd03731131972841bd16c77061892\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\LENOVO\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.0.1\support-annotations-25.0.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="a09194311f8f89c3e6db09d79f50897a889d615e">
-        <dex dex="C:\Users\LENOVO\ZhiHuNews\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.0.1_1ca06fe1a728178591676be712a6e420c9bc3715\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\LENOVO\ZhiHuNews\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.0.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="C:\Users\LENOVO\ZhiHuNews\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-25.0.1_7d789abe88f1b1407ddfe0b2337df58e275454b6\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\LENOVO\ZhiHuNews\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="5cadc76b134af5ce0464a48cdc20ee8b5d9b5d56">
-        <dex dex="C:\Users\LENOVO\ZhiHuNews\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_64c2a3fde6be7da9922ccb87c957e1f98594115b\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\LENOVO\ZhiHuNews\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="2e2670b32fa13674a134a13b1e718e244ad9565c">
+        sha1="fbc887b1ca97f06c69719732fe4b57f1433056c6">
         <dex dex="C:\Users\LENOVO\ZhiHuNews\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_5ad43a5ef861b32fcb4a78fce340356f696f088c\classes.dex" />
     </item>
     <item
@@ -183,6 +120,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\LENOVO\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.7\751f548c85fa49f330cecbb1875893f971b33c4e\gson-2.7.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
+        <dex dex="C:\Users\LENOVO\ZhiHuNews\app\build\intermediates\transforms\dex\debug\folders\1000\10\gson-2.7_e52c9c76e4f03520fc6f341f4ceabd6737e2aefd\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\LENOVO\ZhiHuNews\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.0.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
@@ -201,12 +147,30 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\LENOVO\ZhiHuNews\app\build\intermediates\exploded-aar\com.android.support\transition\25.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c1b6ab157e8e12cb08b9ee82bb5e3c5d22632eb3">
+        <dex dex="C:\Users\LENOVO\ZhiHuNews\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-transition-25.0.1_f6ecd696d544764dbc3bf027f67a7201b60b46fe\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\LENOVO\ZhiHuNews\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.0.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="772bed2d992b67b9d0327f766cc95cd63031dcd3">
         <dex dex="C:\Users\LENOVO\ZhiHuNews\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-25.0.1_08a1ef900939a3c06756224a707a9a41841faa0c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\LENOVO\ZhiHuNews\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c0bd6ffb002a85b5e7cad29f8558d1cc59539679">
+        <dex dex="C:\Users\LENOVO\ZhiHuNews\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.1_57e553359a27d63e44a78994079aa236ffed6c0f\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -219,12 +183,39 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\LENOVO\ZhiHuNews\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f83b00041ecfba705603fec40363416c7de69719">
+        <dex dex="C:\Users\LENOVO\ZhiHuNews\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.1_21743203f698db85fe7483e109c0d61a31dd27b7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\LENOVO\ZhiHuNews\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="297d4bcf6ed4e747a1bf7d0d094a2d911a8d3a8e">
+        <dex dex="C:\Users\LENOVO\ZhiHuNews\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-25.0.1_ef52d878937e235fa2de141d15f568fcda66e59c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\LENOVO\ZhiHuNews\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.0.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="f7ac4b327fdb9e2ee386f5adc46164927658de4b">
         <dex dex="C:\Users\LENOVO\ZhiHuNews\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-25.0.1_0bd9b0b4b4893eae89b97724485a6353cb624067\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\LENOVO\ZhiHuNews\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6a1479afe9f1b3645e1cd9a87318976893472818">
+        <dex dex="C:\Users\LENOVO\ZhiHuNews\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-25.0.1_5539e32e020fb5b3e8ede7e44d5ce1bf8d13f029\classes.dex" />
     </item>
 
 </items>
