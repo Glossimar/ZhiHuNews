@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bignerdranch.android.zhihunews.JSONData.TopLin_Theme;
 import com.bignerdranch.android.zhihunews.JSONData.TopicLin;
 import com.bignerdranch.android.zhihunews.R;
 import com.bignerdranch.android.zhihunews.TopLin.TopLin_theme;
@@ -36,7 +37,10 @@ public class ThemeMenuAdapter extends RecyclerView.Adapter<ThemeMenuAdapter.View
 
     public ThemeMenuAdapter(TopicLin topicLin){
         this.topicLin=topicLin;
-//        this.activity=activity1;
+    }
+    public ThemeMenuAdapter(TopicLin topicLin,Activity activity){
+        this.topicLin=topicLin;
+        this.activity=activity;
     }
     @Override
     public ThemeMenuAdapter.ViewHolder onCreateViewHolder(final ViewGroup parent, int viewType) {
@@ -50,6 +54,9 @@ public class ThemeMenuAdapter extends RecyclerView.Adapter<ThemeMenuAdapter.View
                 Intent intent=new Intent(v.getContext(), TopLin_theme.class);
                 intent.putExtra("intID",othersClass.getId());
                 v.getContext().startActivity(intent);
+                if (activity!=null){
+                    activity.finish();
+                }
             }
         });
 

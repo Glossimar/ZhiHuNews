@@ -255,8 +255,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void initViews(){
         imageViewList=new ArrayList<ImageView>();
 
-        TextView titleViewPager;
-//        ImageView dotView=null;
+//        TextView titleViewPager;
+        ImageView dotView=null;
         layoutParams=new LinearLayout.LayoutParams(ViewPager.LayoutParams.WRAP_CONTENT,ViewPager.LayoutParams.WRAP_CONTENT);
         layoutParams.leftMargin=1;
 
@@ -330,35 +330,34 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
             imageViewList.add(imageView);
             viewPager.setCurrentItem(1,true);
-//            dotView=new ImageView(getApplicationContext());
-            titleViewPager=new TextView(getApplicationContext());
-            titleViewPager.setTextSize(20);
-//            if(i==1)
-//                titleViewPager.setText(mainData.getTop_stories().get(i).getTitle());
-//            Log.d(TAG, "initViews: "+i);
+            dotView=new ImageView(getApplicationContext());
+//            titleViewPager=new TextView(getApplicationContext());
+//            titleViewPager.setTextSize(20);
+//            if(i==1){
+//
 //                dotView.setImageResource(R.drawable.page_now);
 //            }else {
 //                dotView.setImageResource(R.drawable.page);
 //            }
-//            dotView.setTag(i);
-//            dotView.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//                    int id=(Integer)v.getTag();
-//                    viewPager.setCurrentItem(id);
-//                }
-//            });
-//            layout.addView(titleViewPager,layoutParams);
+            dotView.setTag(i);
+            dotView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int id=(Integer)v.getTag();
+                    viewPager.setCurrentItem(id);
+                }
+            });
+            layout.addView(dotView,layoutParams);
         }
 
         imageView=new ImageView(getApplicationContext());
         imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
         LoadPic.loadImg(MainActivity.this,mainData.getTop_stories().get(0).getImage(),imageView);
-        imageViewList.add(4,imageView);
+        imageViewList.add(6,imageView);
 
         viewPager.setAdapter(new RollViewPagerAdapter(imageViewList));
         viewPager.setOffscreenPageLimit(7);
-        viewPager.setCurrentItem(4,true);
+        viewPager.setCurrentItem(1,true);
         tttt.setText(mainData.getTop_stories().get(0).getTitle());
     }
 

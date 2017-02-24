@@ -162,7 +162,7 @@ public class TopLin_theme extends AppCompatActivity implements View.OnClickListe
 //                final TopicLinAdapter adapter = new TopicLinAdapter(TopLin_theme.this,
 //                        R.layout.recycler_menu_name,getOthersClass());
                 recyclerViewMenu.setLayoutManager(new LinearLayoutManager(TopLin_theme.this));
-                recyclerViewMenu.setAdapter(new ThemeMenuAdapter(MainActivity.getTopicLin()));
+                recyclerViewMenu.setAdapter(new ThemeMenuAdapter(MainActivity.getTopicLin(),TopLin_theme.this));
                /* int j;
 
                     if (topLinTheme.getStories().get(i).getImages() != null) {
