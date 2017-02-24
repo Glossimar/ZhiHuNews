@@ -19,18 +19,19 @@
     主要用了viewPager的setCurrentItem()、handle继承后覆写的方法handleMessage()（虽然继承了<br>ViewPager.OnPageChangeListener然而。。。监听依然没加上。。。QWQ）<br>
   * RecyclerView和CardView用来显示新闻列表、主题日报、编辑信息和长评；<br>
   * 用了DrawerLayout实现了侧滑菜单；
-  * 用了Bitmap、Convas、Paint、ColorFliter以及关联画笔的BitmapShader写了无法设置头像边界的圆形头像（我一直不是很懂他的平移。。。）；
-  * ExpandableListView实现了短评折叠；
-  * 在主界面的具体新闻中用了可折叠式标题栏CollaspingToolbarLayout将新闻对应的图片以及标题栏一起折叠
+  * 用了Bitmap、Convas、Paint、ColorFliter以及关联画笔的BitmapShader写了无法设置头像边界的圆形头像（我一直不是很懂他的平移。。。）；<br>
+  * ExpandableListView实现了短评折叠；<br>
+  * 在主界面的具体新闻中用了可折叠式标题栏CollaspingToolbarLayout将新闻对应的图片以及标题栏一起折叠<br>
 ##使用的开源库:
 #####Glide图片加载：<br>
 ```java
 compile 'com.github.bumptech.glide:glide:3.7.0'
 ```
+<br>
 #####Gson解析json数据：<br>
 ```java
 compile 'com.google.code.gson:gson:2.7'
 ```
-   -------------
+
 ##P.S.
   真机调试时会出现点击延迟
