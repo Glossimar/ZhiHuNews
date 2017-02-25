@@ -17,6 +17,7 @@
   * Glide加载图片<br>
   * 继承了handle、ViewPager、PagerAdapter写了ViewPager无限轮播图:<br>
     主要用了viewPager的setCurrentItem()、handle继承后覆写的方法handleMessage()（虽然继承了<br>ViewPager.OnPageChangeListener然而。。。监听依然没加上。。。QWQ）<br>
+![](https://github.com/SunWanQi/ZhiHuReadmePic/blob/master/roll.gif)<br>
   * RecyclerView和CardView用来显示新闻列表、主题日报、编辑信息和长评；<br>
   * 用了DrawerLayout实现了侧滑菜单；
   * 用了Bitmap、Convas、Paint、ColorFliter以及关联画笔的BitmapShader写了无法设置头像边界的圆形头像（我一直不是很懂他的平移。。。）；<br>
@@ -45,4 +46,4 @@ compile 'com.google.code.gson:gson:2.7'
    **虚拟机调试：**<br>
 ![](https://github.com/SunWanQi/ZhiHuNews/blob/master/app/src/main/res/drawable/jvm.png)<br><br><br>
    **真机调试：**<br>
-![](https://github.com/SunWanQi/ZhiHuNews/blob/master/app/src/main/res/drawable/true.png)
+![](https://github.com/SunWanQi/ZhiHuNews/blob/master/app/src/main/res/drawable/phone.png)
