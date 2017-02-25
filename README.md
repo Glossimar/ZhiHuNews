@@ -1,4 +1,4 @@
-# 寒假考核———————知乎日报
+# 寒假考核————知乎日报
 ##apk下载地址：<br>
                                                                                                                                            
    [知乎日报apk下载](http://pan.baidu.com/s/1o78GbiU "悬停显示")
@@ -12,7 +12,7 @@
   * 在查看具体新闻时可以用回顶部按钮方便回到顶部；<br>
   * 有wifi的时候会进行开启界面和主界面的自动缓存，当网络未连接时会读取之前的缓存信息；<br>
 
-##用到的类以及类的方法
+##用到的类以及类的方法：
   * 用了HttpURLConnection发送了网络请求，并用Gson解析了json数据；<br>
   * Glide加载图片<br>
   * 继承了handle、ViewPager、PagerAdapter写了ViewPager无限轮播图:<br>
@@ -42,7 +42,7 @@ compile 'com.google.code.gson:gson:2.7'
   * 真机调试时会出现点击延迟；<br>
   * 在虚拟机上调试时出现的“今日热闻”里面的新闻会比真机调试时的要少很多；<br>
   
-    虚拟机调试：
-![](https://github.com/SunWanQi/ZhiHuNews/blob/master/app/src/main/res/drawable/jvm.png)
-    真机调试：
+   **虚拟机调试：**<br>
+![](https://github.com/SunWanQi/ZhiHuNews/blob/master/app/src/main/res/drawable/jvm.png)<br><br><br>
+   **真机调试：**<br>
 ![](https://github.com/SunWanQi/ZhiHuNews/blob/master/app/src/main/res/drawable/true.png)
