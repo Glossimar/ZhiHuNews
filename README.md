@@ -11,6 +11,7 @@
   * 点击标题栏的点赞图标，可（假）以（装）点（赞）赞（了），并显示当前赞的数量，点赞以后图标会变成红色；<br>
   * 在查看具体新闻时可以用回顶部按钮方便回到顶部；<br>
   * 有wifi的时候会进行开启界面和主界面的自动缓存，当网络未连接时会读取之前的缓存信息；<br>
+![](https://github.com/SunWanQi/ZhiHuReadmePic/blob/master/loadpic.gif)<br>
 
 ##用到的类以及类的方法：
   * 用了HttpURLConnection发送了网络请求，并用Gson解析了json数据；<br>
@@ -43,7 +44,5 @@ compile 'com.google.code.gson:gson:2.7'
   * 真机调试时会出现点击延迟；<br>
   * 在虚拟机上调试时出现的“今日热闻”里面的新闻会比真机调试时的要少很多；<br>
   
-   **虚拟机调试：**<br>
-![](https://github.com/SunWanQi/ZhiHuNews/blob/master/app/src/main/res/drawable/jvm.png)<br><br><br>
-   **真机调试：**<br>
-![](https://github.com/SunWanQi/ZhiHuNews/blob/master/app/src/main/res/drawable/phone.png)
+           **虚拟机调试：**                                             **真机调试：**<br>
+![](https://github.com/SunWanQi/ZhiHuNews/blob/master/app/src/main/res/drawable/jvm.png)                        ![](https://github.com/SunWanQi/ZhiHuNews/blob/master/app/src/main/res/drawable/phone.png)
