@@ -1,8 +1,15 @@
 package com.bignerdranch.android.zhihunews.OpenView;
 
 import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Environment;
+import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -14,6 +21,7 @@ import com.bignerdranch.android.zhihunews.Functions.ActivityCloser;
 import com.bignerdranch.android.zhihunews.Functions.HttpCalBackListener;
 import com.bignerdranch.android.zhihunews.Functions.HttpResquest;
 import com.bignerdranch.android.zhihunews.Functions.LoadPic;
+import com.bignerdranch.android.zhihunews.Functions.PermissionRequest;
 import com.bignerdranch.android.zhihunews.JSONData.OpenData;
 import com.bignerdranch.android.zhihunews.JSONData.OpenDataNew;
 import com.bignerdranch.android.zhihunews.MainView.MainActivity;
@@ -23,25 +31,36 @@ import com.google.gson.Gson;
 import java.io.File;
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.jar.Manifest;
 
 public class OpenView extends AppCompatActivity {
 
-    private File  file;
+    private File file;
+    private int permissionNum1;
+    private PermissionRequest permissionRequestWrite;
+    private PermissionRequest permissionRequestRead;
+    private boolean granted;
     private TextView textView;
     private ImageView imgView;
     private OpenDataNew openNew;
     private String openDataSaved;
-    private String TAG="OpenView";
+    private String TAG = "OpenView";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_open_view);
+        permissionNum1=1;
+        permissionRequestWrite=new PermissionRequest(OpenView.this,"应用需要获取你的缓存权限，是否授权？",permissionNum1);
+        permissionNum1=2;
+        permissionRequestRead=new PermissionRequest(OpenView.this,"应用需要获取你的缓存权限，是否授权？",permissionNum1);
+
         textView = (TextView) findViewById(R.id.text);
         imgView = (ImageView) findViewById(R.id.img_open);
         file = Environment.getExternalStorageDirectory();
         final String fileName = file.toString() + File.separator + "open.txt";
-
+        permissionRequestWrite.initPermission();
+        permissionRequestRead.initPermission();
         if (HttpResquest.isNetworkConnected(this)) {
             Log.d(TAG, "onCreate: 网络已连接");
             HttpResquest.http("https://news-at.zhihu.com/api/7/prefetch-launch-images/1080*1668",
@@ -89,10 +108,6 @@ public class OpenView extends AppCompatActivity {
         timer.schedule(timerTask, 5000);
     }
 
-
-
-
-
     public void parseJosnOpen(String jsonData) {
         Gson gson = new Gson();
         openNew = gson.fromJson(jsonData, OpenDataNew.class);
@@ -100,10 +115,57 @@ public class OpenView extends AppCompatActivity {
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                textView.setText("@"+openNew.getCreatives().get(0).getText());
-                LoadPic.loadImg(OpenView.this, openNew.getCreatives().get(0).getUrl(),imgView);
+                textView.setText("@" + openNew.getCreatives().get(0).getText());
+                LoadPic.loadImg(OpenView.this, openNew.getCreatives().get(0).getUrl(), imgView);
             }
         });
     }
+
+    private void initPermission() {
+        int permission = 0;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+            permission = ContextCompat.checkSelfPermission(OpenView.this
+                    , android.Manifest.permission.READ_EXTERNAL_STORAGE);
+        }
+
+        if (permission != PackageManager.PERMISSION_GRANTED) {
+            if (shouldRequest())
+                return;
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                ActivityCompat.requestPermissions(OpenView.this, new String[]{android.Manifest.permission.READ_EXTERNAL_STORAGE}, 1);
+            }
+        }
+    }
+
+    private boolean shouldRequest(){
+        if (ActivityCompat.shouldShowRequestPermissionRationale(this
+                ,android.Manifest.permission.READ_EXTERNAL_STORAGE)){
+            explainDialog();
+            return true;
+        }
+        return false;
+    }
+
+    private void explainDialog(){
+        AlertDialog.Builder builder=new AlertDialog.Builder(this);
+        builder.setMessage("应用需要获取你的缓存权限，是否授权？").setPositiveButton("确定", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                    ActivityCompat.requestPermissions(OpenView.this
+                            ,new String[]{android.Manifest.permission.READ_EXTERNAL_STORAGE},1);
+                }
+            }
+        }).setNegativeButton("取消",null).create().show();
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode==1&&grantResults.length>0){
+            granted=grantResults[0]==PackageManager.PERMISSION_GRANTED;
+        }
+    }
 }
+
 
