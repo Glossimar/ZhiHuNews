@@ -9,14 +9,15 @@
   * 点击编辑的头像可以查看编辑个人信息；<br>
   * 点击标题栏的评论图标可以查看评论，短评不看时可以折叠起来；<br>
   * 点击标题栏的点赞图标，可（假）以（装）点（赞）赞（了），并显示当前赞的数量，点赞以后图标会变成红色；<br>
-  * 在查看具体新闻时可以用回顶部按钮方便回到顶部；<br>
-  * 有wifi的时候会进行开启界面和主界面的自动缓存，当网络未连接时会读取之前的缓存信息；<br>
+  * 有wifi的时候会进行开启界面和主界面的自动缓存，当网络未连接时会读取之前的缓存信息(虚拟机的权限还在修改)；<br>
+![](https://github.com/SunWanQi/ZhiHuReadmePic/blob/master/loadpic.gif)<br>
 
 ##用到的类以及类的方法：
   * 用了HttpURLConnection发送了网络请求，并用Gson解析了json数据；<br>
   * Glide加载图片<br>
   * 继承了handle、ViewPager、PagerAdapter写了ViewPager无限轮播图:<br>
     主要用了viewPager的setCurrentItem()、handle继承后覆写的方法handleMessage()（虽然继承了<br>ViewPager.OnPageChangeListener然而。。。监听依然没加上。。。QWQ）<br>
+![](https://github.com/SunWanQi/ZhiHuReadmePic/blob/master/roll.gif)<br>
   * RecyclerView和CardView用来显示新闻列表、主题日报、编辑信息和长评；<br>
   * 用了DrawerLayout实现了侧滑菜单；
   * 用了Bitmap、Convas、Paint、ColorFliter以及关联画笔的BitmapShader写了无法设置头像边界的圆形头像（我一直不是很懂他的平移。。。）；<br>
@@ -42,7 +43,7 @@ compile 'com.google.code.gson:gson:2.7'
   * 真机调试时会出现点击延迟；<br>
   * 在虚拟机上调试时出现的“今日热闻”里面的新闻会比真机调试时的要少很多；<br>
   
-   **虚拟机调试：**<br>
-![](https://github.com/SunWanQi/ZhiHuNews/blob/master/app/src/main/res/drawable/jvm.png)<br><br><br>
-   **真机调试：**<br>
-![](https://github.com/SunWanQi/ZhiHuNews/blob/master/app/src/main/res/drawable/true.png)
+  **虚拟机调试：**<br>
+![](https://github.com/SunWanQi/ZhiHuNews/blob/master/app/src/main/res/drawable/jvm.png)<br>
+  **真机调试：**<br>
+![](https://github.com/SunWanQi/ZhiHuNews/blob/master/app/src/main/res/drawable/phone.png)
