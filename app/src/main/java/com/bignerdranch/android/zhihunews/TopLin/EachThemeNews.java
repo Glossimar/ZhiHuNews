@@ -45,6 +45,7 @@ public class EachThemeNews extends AppCompatActivity {
         setContentView(R.layout.activity_each_theme_news);
         intentlast=getIntent();
         themeNewsId=intentlast.getIntExtra("EachThemeNewsId",23333);
+        Log.d(TAG, "onCreate: "+themeNewsId);
         toolbar=(Toolbar)findViewById(R.id.ToolBar_theme);
 //        collapsingToolbarLayout=(CollapsingToolbarLayout)
 //                findViewById(R.id.CollapsingToolbarLayout_Theme);
@@ -53,7 +54,21 @@ public class EachThemeNews extends AppCompatActivity {
 
         ws=webView.getSettings();
 
+        HttpResquest.http("http://news-at.zhihu.com/api/4/story-extra/"+themeNewsId, new HttpCalBackListener() {
+            @Override
+            public void onFnish(String responce) {
+
+                Log.d(TAG, "onFnish: 额外信息");
+                pareJsonExtra(responce);
+            }
+
+            @Override
+            public void onError(Exception e) {
+
+            }
+        });
         toolbar.setTitle("");
+        Log.d(TAG, "onCreate: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         setSupportActionBar(toolbar);
         if (getSupportActionBar()!=null){
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -70,17 +85,17 @@ public class EachThemeNews extends AppCompatActivity {
             }
         });
 
-        HttpResquest.http("http://news-at.zhihu.com/api/4/story-extra/" + themeNewsId, new HttpCalBackListener() {
-            @Override
-            public void onFnish(String responce) {
-
-            }
-
-            @Override
-            public void onError(Exception e) {
-
-            }
-        });
+//        HttpResquest.http("http://news-at.zhihu.com/api/4/story-extra/" + themeNewsId, new HttpCalBackListener() {
+//            @Override
+//            public void onFnish(String responce) {
+//
+//            }
+//
+//            @Override
+//            public void onError(Exception e) {
+//
+//            }
+//        });
     }
 
 
@@ -100,6 +115,12 @@ public class EachThemeNews extends AppCompatActivity {
                         ,"text/html","UTF-8",null);
             }
         });
+    }
+
+    public void pareJsonExtra(String  jsonData){
+        Gson gson=new Gson();
+        extraData=gson.fromJson(jsonData,ExtraData.class);
+
     }
 
     private void paresJsonExtaData(String jsonData){
@@ -123,11 +144,11 @@ public class EachThemeNews extends AppCompatActivity {
                 if (item.getIcon().getConstantState().equals(getResources()
                         .getDrawable(R.drawable.fabulous).getConstantState())){
                     item.setIcon(R.drawable.fabulous_red);
-//                    Toast.makeText(EachThemeNews.this,R.drawable.fabulous+extraData.getPopularity()+"+1",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "这是第"+(extraData.getPopularity()+1)+"个赞啦", Toast.LENGTH_SHORT).show();
                     extraData.setPopularity(extraData.getPopularity()+1);
                 }else {
                     item.setIcon(R.drawable.fabulous);
-                    extraData.setPopularity(extraData.getPopularity()-1);
+                    Toast.makeText(this, "...QAQ...\n少了一个赞\n只有"+extraData.getPopularity()+"个赞了", Toast.LENGTH_SHORT).show();
                 }
                 break;
             case R.id.commit:
