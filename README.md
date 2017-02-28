@@ -1,7 +1,7 @@
 # 寒假考核————知乎日报
 ##apk下载地址：<br>
                                                                                                                                            
-   [知乎日报apk下载](http://pan.baidu.com/s/1hrVndMs "悬停显示")
+   [知乎日报apk下载](http://pan.baidu.com/s/1c1O9Gru "悬停显示")
 <br>
 
 ##功能：
